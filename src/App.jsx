@@ -1,20 +1,22 @@
 import './App.css'
+import Timer from './Timer.jsx';
+import StopWatch from './StopWatch';
 import {useState} from 'react';
-
-
-
 
 function App() {
   const [type, setType] = useState(true);
-  const [text, setText] = useState('Type is true');
+  const [text, setText] = useState('Change to timer');
+  const [showTimer, setTimer] = useState(true);
   const ChangeState = (newType) => {
     setType(newType);
     if (newType) {
-      setText('Type is true');
+      setText('Change to timer');
     } else {
-      setText('Type is false');
+      setText('Change to stop-watch');
     }
+    setTimer((prev) => !prev);
   };
+
   return (
     <>
       <div className="full">
@@ -24,7 +26,7 @@ function App() {
           </button>
         </div>
         <div className="timer-stopwatch">
-
+          {showTimer ? <Timer /> : <StopWatch />}
         </div>
         <div className="down">
 
