@@ -1,0 +1,25 @@
+.Timer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-txt{
+    color: darkred;
+}
+.formatted-Time{
+    font-size: 5vw;
+    color: #535bf2;
+}
+.btn-collection{
+    display: flex;
+    width: 100%;
+}
+.start-stop-btn{
+    background: green;
+    color: white;
+    width: 50%;
+}
+.reset-btn{
+    width: 50%;
+    background: yellow;
+}

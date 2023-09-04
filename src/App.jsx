@@ -1,18 +1,18 @@
 import './App.css'
+import StopWatch from './StopWatch.jsx';
 import Timer from './Timer.jsx';
-import StopWatch from './StopWatch';
 import {useState} from 'react';
 
 function App() {
   const [type, setType] = useState(true);
   const [text, setText] = useState('Change to timer');
-  const [showTimer, setTimer] = useState(true);
+  const [showTimer, setTimer] = useState(false);
   const ChangeState = (newType) => {
     setType(newType);
     if (newType) {
-      setText('Change to timer');
-    } else {
       setText('Change to stop-watch');
+    } else {
+      setText('Change to timer');
     }
     setTimer((prev) => !prev);
   };
@@ -26,7 +26,7 @@ function App() {
           </button>
         </div>
         <div className="timer-stopwatch">
-          {showTimer ? <Timer /> : <StopWatch />}
+          {showTimer ? <StopWatch /> : <Timer />}
         </div>
         <div className="down">
 
