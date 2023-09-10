@@ -1,7 +1,8 @@
+import './Timer.css'
 function Timer() {
     return (
         <>
-            This is Timer
+            This is Timer!!
         </>
     )
 }
